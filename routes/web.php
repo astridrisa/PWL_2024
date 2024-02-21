@@ -43,7 +43,7 @@ Route::get('/about', function () {
 
 //Praktikum 2
 Route::get('/user/{astrid}', function ($name) { 
-    return 'Astrid Risa Widiana '.$name;
+    return 'Nama Saya '.$name;
 });
 
 Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
@@ -57,5 +57,12 @@ Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
 
 //Praktikum 3
 Route::get('/user/{name?}', function ($name='John') {
-    return 'Astrid Risa Widiana '.$name;
+    return 'Nama Saya '.$name;
 });
+
+
+
+use App\Http\Controllers\WelcomeController;
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
+    
+    
